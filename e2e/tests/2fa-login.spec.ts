@@ -1,11 +1,18 @@
 import { test } from '@playwright/test';
-import { getTwoFactorCode } from './mailosaur-helper';
+import { getTwoFactorCode } from '../mailosaur-helper';
 import { LoginPage } from '../../pages/login.page';
 import { DashboardPage } from '../../pages/dashboard.page';
 
-test('Login with 2FA email code (POM)', async ({ page }) => {
-  const email = 'put here email';
-  const password = 'put here password';
+test('Login with 2FA email code', async ({ page }) => {
+  const email = process.env.EMAIL;
+  const password = process.env.PASSWORD+'1';
+
+  if (!email) {
+    throw new Error('EMAIL is not set in environment');
+  }
+  if (!password) {
+    throw new Error('PASSWORD is not set in environment');
+  }
 
   // Increase timeout for this test to 60s
   test.setTimeout(60_000);
