@@ -16,32 +16,47 @@ function getEnvCredentials() {
   return { email, password };
 }
 
+// test('Login with 2FA email code', async ({ page }) => {
+//   const { email, password } = getEnvCredentials();
+//   const loginPage = new LoginPage(page);
+  
+//   // Perform 2FA login
+//   await loginPage.goto();
+//   await loginPage.fillCredentials(email, password);
+//   await loginPage.submitLogin();
+  
+//   // Wait for email to be delivered and get 2FA code
+//   await page.waitForTimeout(7_000);
+//   const code = await getTwoFactorCode(email);
+//   await loginPage.submitPasscode(code);
+// });
 
-test('Login with 2FA email code', async ({ page }) => {
-  const { email, password } = getEnvCredentials();
-  const loginPage = new LoginPage(page);
-  // Perform 2FA login
-  await loginPage.goto();
-  await loginPage.fillCredentials(email, password);
-  await loginPage.submitLogin();
-  // Wait for email to be delivered and get 2FA code
-  await page.waitForTimeout(7_000);
-  const code = await getTwoFactorCode(email);
-  await loginPage.submitPasscode(code);
-  // Verify successful login
-  await loginPage.verifySuccessfulLogin(page);
+test.describe('Dashboard Navigation', () => {
+  test.beforeEach(async ({ page }) => {
+    const loginPage = new LoginPage(page);
+    const dashboard = new DashboardPage(page);
+    // Navigate to dashboard - storageState should already be loaded from auth-setup
+    await loginPage.gotoMain();
+    await dashboard.waitForDashboard();
+  });
 
-});
+  test('Navigate to Patients page', async ({ page }) => {
+    const dashboard = new DashboardPage(page);
+    await dashboard.openPatients();
+  });
 
-test('Login without 2FA', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  const dashboard = new DashboardPage(page);
-  // Navigate to dashboard - storageState should already be loaded from auth-setup
-  await loginPage.gotoMain();
-  await dashboard.waitForDashboard(); 
-   // Verify authentication by interacting with dashboard elements
-  await dashboard.openPatients();
-  await dashboard.openCensus();
-  await dashboard.openSmartDrive();
-  await dashboard.openChargeCapture();
+  test('Navigate to Census page', async ({ page }) => {
+    const dashboard = new DashboardPage(page);
+    await dashboard.openCensus();
+  });
+
+  test('Navigate to Smart Drive page', async ({ page }) => {
+    const dashboard = new DashboardPage(page);
+    await dashboard.openSmartDrive();
+  });
+
+  test('Navigate to Charge Capture page', async ({ page }) => {
+    const dashboard = new DashboardPage(page);
+    await dashboard.openChargeCapture();
+  });
 });

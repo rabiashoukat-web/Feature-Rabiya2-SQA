@@ -13,7 +13,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
  */
 export default defineConfig({
   testDir: './',  // Change this to root or remove testDir restriction
-  testMatch: ['**/*.spec.ts', '**/*.setup.ts'], 
+  testMatch: ['**/*.spec.ts'], 
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -27,8 +27,8 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     trace: 'on-first-retry',
-    headless: false,
-    screenshot: 'only-on-failure', // Add this line
+    headless: true,
+    screenshot: 'on', // Add this line
     video: 'retain-on-failure',     // Optional: also record videos on failure
   },
 

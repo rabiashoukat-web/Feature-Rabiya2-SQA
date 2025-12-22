@@ -16,14 +16,14 @@ export class DashboardPage {
   }
 
   async openCensus() {
-    await this.page.getByText('Census').click();
+    await this.page.getByText('Census', { exact: true }).click();
   }
 
   async openSmartDrive() {
-    await this.page.getByText('Smart Drive').click();
+    await this.page.getByText('Smart Drive', { exact: true }).click();
   }
 
   async openChargeCapture() {
-    await this.page.getByText('Charge Capture').click();
+    await this.page.getByText('Charge Capture', { exact: true }).click();
   }
 }
