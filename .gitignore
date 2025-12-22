@@ -6,7 +6,10 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+e2e/playwright/.auth/
+**/playwright/.auth/
 
 # Local environment variables
+.vscode
 .env
 playwright-report/index.html
