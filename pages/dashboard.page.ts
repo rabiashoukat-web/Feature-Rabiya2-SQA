@@ -12,18 +12,25 @@ export class DashboardPage {
 
   async openPatients() {
     const patientsLocator = this.page.getByText('Patients', { exact: true });
+    await expect(patientsLocator).toBeVisible({ timeout: 30000 });
     await patientsLocator.click();
   }
 
   async openCensus() {
-    await this.page.getByText('Census', { exact: true }).click();
+    const censusLocator = this.page.getByText('Census', { exact: true });
+    await expect(censusLocator).toBeVisible({ timeout: 30000 });
+    await censusLocator.click();
   }
 
   async openSmartDrive() {
-    await this.page.getByText('Smart Drive', { exact: true }).click();
+    const smartDriveLocator = this.page.getByText('Smart Drive', { exact: true });
+    await expect(smartDriveLocator).toBeVisible({ timeout: 30000 });
+    await smartDriveLocator.click();
   }
 
   async openChargeCapture() {
-    await this.page.getByText('Charge Capture', { exact: true }).click();
+    const chargeCaptureLocator = this.page.getByText('Charge Capture', { exact: true });
+    await expect(chargeCaptureLocator).toBeVisible({ timeout: 30000 });
+    await chargeCaptureLocator.click();
   }
 }

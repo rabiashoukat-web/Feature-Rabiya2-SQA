@@ -1,20 +1,24 @@
 // tests/utils/mailosaur-helper.ts
 import MailosaurClient from "mailosaur";
 
-const apiKey = process.env.MAILOSAUR_API_KEY;
 const serverId = "ymxgovm8"; // from ymxgovm8.mailosaur.net
 
-if (!apiKey) {
-  throw new Error("MAILOSAUR_API_KEY is not set in environment");
+// Lazy initialization - only check API key when function is called
+// This ensures dotenv has loaded the .env file by the time we need it
+function getClient(): MailosaurClient {
+  const apiKey = process.env.MAILOSAUR_API_KEY;
+  if (!apiKey) {
+    throw new Error("MAILOSAUR_API_KEY is not set in environment");
+  }
+  return new MailosaurClient(apiKey);
 }
-
-const client = new MailosaurClient(apiKey);
 
 export async function getTwoFactorCode(
   toEmail: string = "anything@ymxgovm8.mailosaur.net"
 ): Promise<string> {
   console.log("[Mailosaur] Waiting for 2FA email...");
 
+  const client = getClient();
   const message = await client.messages.get(
     serverId,
     { sentTo: toEmail },
@@ -74,3 +78,4 @@ function extractCode(body: string): string | null {
   const digits = fallback[0].replace(/\D/g, "");
   return digits.length >= 6 ? digits.slice(0, 6) : null;
 }
+

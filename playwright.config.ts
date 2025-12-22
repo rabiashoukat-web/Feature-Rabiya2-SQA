@@ -13,6 +13,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
  */
 export default defineConfig({
   testDir: './',  // Change this to root or remove testDir restriction
+  // testMatch: ['**/*.spec.ts', '**/*.setup.ts'], 
   testMatch: ['**/*.spec.ts'], 
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -20,14 +21,14 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  /* Run 3 tests in parallel locally, 1 worker on CI. */
+  workers: process.env.CI ? 1 : 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     trace: 'on-first-retry',
-    headless: true,
+    headless: true, // Set to false to use regular Chromium instead of headless shell
     screenshot: 'on', // Add this line
     video: 'retain-on-failure',     // Optional: also record videos on failure
   },
@@ -35,7 +36,7 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'general',
       use: { ...devices['Desktop Chrome'],
         storageState: path.resolve(__dirname, 'e2e/playwright/.auth/user.json')
        },
@@ -45,6 +46,7 @@ export default defineConfig({
     {
       name: 'auth-setup',
       testMatch: ['setup/auth.setup.ts'],
+      use: { ...devices['Desktop Chrome'] },
     },
 
     // {

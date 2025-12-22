@@ -43,7 +43,8 @@ export class LoginPage {
     const field = await this.waitForPasscodeField();
     await field.fill(code);
     await this.page.getByRole('button', { name: 'Authenticate' }).click();
-    await this.page.waitForEvent('load');
+    // Wait for navigation to dashboard instead of generic 'load' event
+    await this.verifySuccessfulLogin(this.page);
   }
 
   async loginWith2FA(email: string, password: string, code: string) {
