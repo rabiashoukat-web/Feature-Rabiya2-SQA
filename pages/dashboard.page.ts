@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { expect, Page } from '@playwright/test';
 
 export class DashboardPage {
   readonly page: Page;
@@ -11,7 +11,8 @@ export class DashboardPage {
   }
 
   async openPatients() {
-    await this.page.getByText('Patients').click();
+    const patientsLocator = this.page.getByText('Patients', { exact: true });
+    await patientsLocator.click();
   }
 
   async openCensus() {

@@ -8,5 +8,6 @@ node_modules/
 /playwright/.auth/
 
 # Local environment variables
+.vscode
 .env
 playwright-report/index.html

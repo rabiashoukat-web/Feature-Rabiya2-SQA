@@ -12,7 +12,8 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './e2e',
+  testDir: './',  // Change this to root or remove testDir restriction
+  testMatch: ['**/*.spec.ts', '**/*.setup.ts'], 
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -35,7 +36,15 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'],
+        storageState: path.resolve(__dirname, 'e2e/playwright/.auth/user.json')
+       },
+       dependencies: ['auth-setup'],
+    },
+
+    {
+      name: 'auth-setup',
+      testMatch: ['setup/auth.setup.ts'],
     },
 
     // {

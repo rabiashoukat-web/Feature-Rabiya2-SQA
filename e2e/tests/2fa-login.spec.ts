@@ -3,35 +3,43 @@ import { getTwoFactorCode } from '../mailosaur-helper';
 import { LoginPage } from '../../pages/login.page';
 import { DashboardPage } from '../../pages/dashboard.page';
 
-test('Login with 2FA email code', async ({ page }) => {
+// Helper function to get and validate environment variables
+function getEnvCredentials() {
   const email = process.env.EMAIL;
-  const password = process.env.PASSWORD+'1';
-
+  const password = process.env.PASSWORD;
   if (!email) {
     throw new Error('EMAIL is not set in environment');
   }
   if (!password) {
     throw new Error('PASSWORD is not set in environment');
   }
+  return { email, password };
+}
 
-  // Increase timeout for this test to 60s
-  test.setTimeout(60_000);
 
+test('Login with 2FA email code', async ({ page }) => {
+  const { email, password } = getEnvCredentials();
   const loginPage = new LoginPage(page);
-  const dashboard = new DashboardPage(page);
-
+  // Perform 2FA login
   await loginPage.goto();
   await loginPage.fillCredentials(email, password);
   await loginPage.submitLogin();
-
-  // allow email to be delivered
-  await page.waitForTimeout(10_000);
-
+  // Wait for email to be delivered and get 2FA code
+  await page.waitForTimeout(7_000);
   const code = await getTwoFactorCode(email);
   await loginPage.submitPasscode(code);
+  // Verify successful login
+  await loginPage.verifySuccessfulLogin(page);
 
-  await dashboard.waitForDashboard();
+});
 
+test('Login without 2FA', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  const dashboard = new DashboardPage(page);
+  // Navigate to dashboard - storageState should already be loaded from auth-setup
+  await loginPage.gotoMain();
+  await dashboard.waitForDashboard(); 
+   // Verify authentication by interacting with dashboard elements
   await dashboard.openPatients();
   await dashboard.openCensus();
   await dashboard.openSmartDrive();

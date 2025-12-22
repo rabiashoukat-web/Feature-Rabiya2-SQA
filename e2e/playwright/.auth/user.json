@@ -1,0 +1,71 @@
+{
+  "cookies": [
+    {
+      "name": "SID",
+      "value": "s%3A75556c6b13d1da3e9d3eb43917e2689d.0mpO2g5I2cyDqNIyVOEvBrFVixt%2BuvzyFrowdwdRYys",
+      "domain": "aswc-prelive.app.doctornow.io",
+      "path": "/",
+      "expires": 1767035345.213213,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_dd_s",
+      "value": "logs=1&id=f97b6f44-82ed-4266-b0ea-c9fe1a0dcdd0&created=1766430534131&expire=1766431444925&rum=1",
+      "domain": "aswc-prelive.app.doctornow.io",
+      "path": "/",
+      "expires": 1766431444,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://aswc-prelive.app.doctornow.io",
+      "localStorage": [
+        {
+          "name": "scheduledIdleLogoutAt",
+          "value": "2025-12-23T07:09:05.016Z"
+        },
+        {
+          "name": "third_party_redirect_url",
+          "value": "undefined"
+        },
+        {
+          "name": "eventStack",
+          "value": "0"
+        },
+        {
+          "name": "currentUser",
+          "value": "{\"pcc_auth\":{\"orgUuid\":\"\",\"updatedOn\":\"2025-12-22T13:07:41.344Z\"},\"pcc_account\":{\"privilegeScopes\":[]},\"other_settings\":{\"ui_preferences\":{\"tabs_direction\":\"horizontal\"},\"ppl_pdf_settings\":{\"ppl_pdf_orientation\":\"landscape\",\"ppl_pdf_fontSize\":10,\"ppl_pdf_viewType\":\"list\",\"ppl_pdf_columns\":[{\"key\":\"Name\",\"value\":\"name\"},{\"key\":\"Comments\",\"value\":\"comments\"}]},\"preview_note\":true,\"note_sign_confirmation\":true,\"note_upload_confirmation\":true,\"show_rrgen\":false,\"discharge\":true,\"non_pcc_email\":false,\"pcc_email\":false,\"show_ime_vendor\":false,\"show_esign\":false,\"show_manage_charges\":false,\"show_tat\":false,\"tab_settings\":[],\"diagnosis_tab_order\":[],\"charges_tab_order\":[],\"patient_tab_settings\":[],\"ccmTags\":[],\"nonPCC_patient_tab_settings\":[],\"patients_registration_fields_columns\":[],\"matrix_patient_tab_settings\":[],\"census_columns\":[],\"my_patients_columns\":[\"checkbox\",\"name\",\"gender\",\"date_of_birth\",\"facility\",\"last_seen\",\"inTake_date\",\"end_date_of_care\",\"operations\"],\"ppl_columns\":[\"name\",\"note\",\"action\",\"dd_rd\",\"comments\",\"admission_date\",\"dob\",\"room_no\",\"payor\",\"last_seen\"],\"can_submit_own_charges\":false,\"sidebar_expanded\":false,\"moved_patient_preview\":true,\"expanded_note_editor_area\":false,\"v2_dropdown\":false,\"selected_tags\":[],\"show_matrixCare\":true},\"signature_settings\":{\"font_size\":\"16\",\"font_color\":\"Black\",\"image_height\":\"75px\",\"mendatory\":false},\"registraionSteps\":{\"linkSendDate\":\"2025-12-22T13:07:41.342Z\",\"passwordCreated\":true,\"twoFacAuth\":true,\"twoFacExpire\":\"2025-12-22T13:16:16.721Z\"},\"_id\":\"6949429dfd564542e587d36f\",\"title\":\"M.D.\",\"first_name\":\"Alexey\",\"last_name\":\"Kozlov\",\"pcc_name\":\"\",\"email\":\"anything@ymxgovm8.mailosaur.net\",\"mobile\":\"+18138196803\",\"user_type\":\"1\",\"additional_user_role\":\"demo_provider\",\"account_type\":\"user\",\"npi\":\"1212\",\"tin\":\"\",\"is_activated\":\"true\",\"is_approved_by_admin\":\"true\",\"can_verify_new_User\":false,\"admin_type\":\"none\",\"has_pcc_account\":\"true\",\"pcc_note_upload_authorization\":\"three_legged\",\"two_factor_auth\":true,\"two_factor_auth_method\":\"email\",\"product_owner\":false,\"notes_email_facilities\":[],\"company_id\":\"674ff9e0febef21c45e602eb\",\"associated_company_ids\":[],\"platform\":\"\",\"cognito\":true,\"hipaa_agreement_accepted\":false,\"cognitoPasswordEntered\":true,\"is_Cognito_Email_verified\":false,\"enableCognito\":true,\"permissions\":[{\"_id\":\"671782ef3a73ab504767f366\",\"type\":\"user\",\"key\":\"should_upload_wound_assessment_report\",\"value\":\"Upload Wound Assessment Report\",\"company_id\":null,\"createdAt\":\"2022-09-21T08:07:45.989Z\",\"updatedAt\":\"2022-09-21T08:07:45.989Z\",\"__v\":0},{\"_id\":\"67178b4d3a73ab504767f368\",\"type\":\"user\",\"key\":\"should_upload_progress_note\",\"value\":\"Upload Progress Note\",\"company_id\":null,\"createdAt\":\"2022-09-21T08:07:45.989Z\",\"updatedAt\":\"2022-09-21T08:07:45.989Z\",\"__v\":0},{\"_id\":\"678e2568284ec447bcf6f631\",\"type\":\"user\",\"key\":\"should_enable_mips\",\"value\":\"Enable MIPS\",\"company_id\":null},{\"_id\":\"671782ef3a73ab504767f366\",\"type\":\"user\",\"key\":\"should_upload_wound_assessment_report\",\"value\":\"Upload Wound Assessment Report\",\"company_id\":null,\"createdAt\":\"2022-09-21T08:07:45.989Z\",\"updatedAt\":\"2022-09-21T08:07:45.989Z\",\"__v\":0},{\"_id\":\"67178b4d3a73ab504767f368\",\"type\":\"user\",\"key\":\"should_upload_progress_note\",\"value\":\"Upload Progress Note\",\"company_id\":null,\"createdAt\":\"2022-09-21T08:07:45.989Z\",\"updatedAt\":\"2022-09-21T08:07:45.989Z\",\"__v\":0},{\"_id\":\"6450c4a2fa3073a36d8fd91c\",\"type\":\"user\",\"company_id\":\"657019ef5254f363a7f14466\",\"key\":\"spell_check_status\",\"value\":\"Spell Check\",\"createdAt\":\"2023-05-02T08:06:58.971Z\",\"updatedAt\":\"2023-05-02T08:06:58.971Z\",\"__v\":0},{\"company_id\":null,\"_id\":\"632ac652ec9fdd278b8ac2e0\",\"type\":\"user\",\"key\":\"show_matrixCare\",\"value\":\"Matrix\",\"createdAt\":\"2022-09-21T08:07:46.621Z\",\"updatedAt\":\"2022-09-21T08:07:46.621Z\",\"__v\":0},{\"_id\":\"6821aa47fab253a64ce4dc50\",\"type\":\"user\",\"key\":\"allow_edit_delete_patients\",\"value\":\"Edit/Delete Patients\",\"company_id\":null,\"createdAt\":\"2022-09-21T08:07:45.989Z\",\"updatedAt\":\"2022-09-21T08:07:45.989Z\"},{\"_id\":\"67178b603a73ab504767f369\",\"type\":\"user\",\"key\":\"add_patients_to_census\",\"value\":\"Add Patients to Census\",\"company_id\":null,\"createdAt\":\"2022-09-21T08:07:45.989Z\",\"updatedAt\":\"2022-09-21T08:07:45.989Z\",\"__v\":0},{\"_id\":\"632ac652ec9fdd278b8ac274\",\"type\":\"user\",\"key\":\"charge_status\",\"value\":\"Charge Capture\",\"company_id\":\"657019ef5254f363a7f14466\",\"createdAt\":\"2022-09-21T08:07:46.134Z\",\"updatedAt\":\"2022-09-21T08:07:46.134Z\",\"__v\":0},{\"_id\":\"632ac651ec9fdd278b8ac25d\",\"type\":\"user\",\"key\":\"has_pcc_account\",\"value\":\"Pcc\",\"company_id\":\"657019ef5254f363a7f14466\",\"createdAt\":\"2022-09-21T08:07:45.989Z\",\"updatedAt\":\"2022-09-21T08:07:45.989Z\",\"__v\":0}],\"scriptsure_practiceIds\":[],\"google_auth_enabled\":false,\"is_phone_number_changed\":false,\"speciality\":[],\"pcc_note_uploading_method_per_facility\":[],\"matrix_note_uploading_method_per_facility\":[],\"matrix_pdf_destination\":[],\"profile_pic\":\"https://i.imgur.com/RXB5dFH.png\",\"is_verified\":\"true\",\"authentication_method\":\"email\",\"recentLogin\":\"2025-12-22T19:06:54.019Z\",\"timezone\":\"America/New_York\",\"web_auth_key\":\"TmWXygBAYETHZoncaEdnbGdsD1766430486502\",\"should_upload_wound_assessment_report\":true,\"should_upload_progress_note\":true,\"should_enable_mips\":true,\"spell_check_status\":true,\"allow_edit_delete_patients\":true,\"add_patients_to_census\":true,\"charge_status\":true,\"company_type\":\"Wound\",\"portal_type\":\"wc\",\"auth_key\":\"TmWXygBAYETHZoncaEdnbGdsD1766430486502.WEB\"}"
+        },
+        {
+          "name": "play",
+          "value": "false"
+        },
+        {
+          "name": "statsig.stable_id.26566527",
+          "value": "\"57538eea-ff97-4a56-a10d-96b43835c738\""
+        },
+        {
+          "name": "statsig.session_id.26566527",
+          "value": "{\"sessionID\":\"9f6d0309-bd38-4180-b540-3cde48bd80ae\",\"startTime\":1766430543423,\"lastUpdate\":1766430545018}"
+        },
+        {
+          "name": "app_version",
+          "value": "0.0.0"
+        },
+        {
+          "name": "pause",
+          "value": "false"
+        },
+        {
+          "name": "latest_app_version",
+          "value": "0.0.0"
+        }
+      ]
+    }
+  ]
+}

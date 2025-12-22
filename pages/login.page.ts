@@ -7,7 +7,21 @@ export class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('https://dev-app.doctornow.io/login');
+    const url = process.env.URL;
+    if (!url) {
+      throw new Error('URL is not set in environment');
+    }
+    await this.page.goto(url);
+  }
+
+  async gotoMain() {
+    const url = process.env.URL;
+    if (!url) {
+      throw new Error('URL is not set in environment');
+    }
+    // Normalize URL: remove trailing slash if present, then add /dashboard
+    const baseUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+    await this.page.goto(baseUrl + '/dashboard');
   }
 
   async fillCredentials(email: string, password: string) {
@@ -29,6 +43,7 @@ export class LoginPage {
     const field = await this.waitForPasscodeField();
     await field.fill(code);
     await this.page.getByRole('button', { name: 'Authenticate' }).click();
+    await this.page.waitForEvent('load');
   }
 
   async loginWith2FA(email: string, password: string, code: string) {
@@ -37,4 +52,16 @@ export class LoginPage {
     await this.page.waitForTimeout(10_000);
     await this.submitPasscode(code);
   }
+
+  async verifySuccessfulLogin(page: Page) {
+    const url = process.env.URL;
+    if (!url) {
+      throw new Error('URL is not set in environment');
+    }
+    // Normalize URL: remove trailing slash if present, then add /dashboard
+    const baseUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+    await expect(page).toHaveURL(baseUrl + '/dashboard');
+  }
 }
+
+
