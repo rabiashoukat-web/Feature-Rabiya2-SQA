@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:login": "playwright test e2e/tests/rabiya-login.spec.ts --project=general",
+    "test:census": "playwright test e2e/tests/census.spec.ts --project=general"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
