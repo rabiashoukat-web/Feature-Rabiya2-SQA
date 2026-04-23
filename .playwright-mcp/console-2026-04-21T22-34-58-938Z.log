@@ -1,0 +1,16 @@
+[    1763ms] [ERROR] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element. @ https://prelive.app.doctornow.io/:22
+[    1973ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://prelive.app.doctornow.io/styles.css:0
+[   14492ms] [LOG] AI Widget: Starting removal process @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14494ms] [LOG] AI Widget: Removal completed @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14506ms] [LOG] AI Widget: Starting removal process @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14507ms] [LOG] AI Widget: Removal completed @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14523ms] [LOG] companyLogoPath null @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14526ms] [LOG] Checking if unauth route / @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14527ms] [LOG] Subscribing to user auth change @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14527ms] [LOG] AI Widget: Starting removal process @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14528ms] [LOG] AI Widget: Removal completed @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453
+[   14584ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://prelive.app.doctornow.io/login:0
+[   14603ms] [ERROR] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element. @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7455
+[   14604ms] [ERROR] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element. @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7455
+[   14609ms] [ERROR] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element. @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7455
+[   16291ms] [LOG] [Socket] ✅ Connected -YWI5gS9GMTz4kE3AACP @ https://prelive.app.doctornow.io/chunk-2ZQLEXOC.js:7453

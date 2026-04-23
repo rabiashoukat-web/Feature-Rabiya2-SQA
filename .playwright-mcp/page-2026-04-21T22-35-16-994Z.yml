@@ -1,0 +1,35 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - img [ref=e7]
+    - generic [ref=e9]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - text: Email address
+          - generic [ref=e15]: "*"
+        - textbox "Email address" [ref=e16]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - text: Password
+            - generic [ref=e23]: "*"
+          - textbox "Password" [ref=e24]
+        - img [ref=e26] [cursor=pointer]: visibility_off
+      - generic [ref=e28]:
+        - generic [ref=e31]:
+          - generic [ref=e32] [cursor=pointer]:
+            - checkbox "Remember me" [ref=e34]
+            - generic:
+              - img
+          - generic [ref=e35] [cursor=pointer]: Remember me
+        - generic [ref=e37] [cursor=pointer]: Forgot password?
+        - generic [ref=e40]:
+          - switch "Login with SSO" [ref=e41] [cursor=pointer]:
+            - generic [ref=e46]:
+              - img [ref=e47]
+              - img [ref=e49]
+          - generic [ref=e51] [cursor=pointer]: Login with SSO
+      - generic [ref=e52]:
+        - button "Login" [ref=e53]:
+          - generic [ref=e54]: Login
+        - generic [ref=e59] [cursor=pointer]: Contact Us
+  - generic [ref=e60]: DocNow@v2026

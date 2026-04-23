@@ -11,4 +11,5 @@ Rules to follow:
 2. Application Exploration: Navigate the application using the MCP tool to verify its structure, elements, and flows before writing the test. If you encounter any issues while exploring, report them and wait for human input.
 3. Data Test IDs and Role-Based Locators: Use data test IDs for selecting elements when available. If unavailable, use role-based locators.
 4. Assertions Based on Application State: Write assertions based on the current state of the application. Do not make assumptions about the application.
-5. Use this web site https://valentinos-magic-beans.click/ 
+5. Use this web site prelive.app.doctornow.io for testing and exploration.
+6. Test Case Fidelity: Convert provided test case steps into explicit test actions in the same logical

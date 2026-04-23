@@ -6,7 +6,9 @@
   "scripts": {
     "test": "playwright test",
     "test:login": "playwright test e2e/tests/rabiya-login.spec.ts --project=general",
-    "test:census": "playwright test e2e/tests/census.spec.ts --project=general"
+    "test:census": "playwright test e2e/tests/census.spec.ts --project=general",
+    "codegen": "playwright codegen",
+    "codegen:login": "playwright codegen https://dev-app.doctornow.io"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,7 @@
     "mailosaur": "^9.0.0"
   },
   "devDependencies": {
+    "@playwright/mcp": "^0.0.70",
     "@playwright/test": "^1.57.0",
     "@types/node": "^24.10.1"
   }
